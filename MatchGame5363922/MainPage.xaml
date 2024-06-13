@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MatchGame5363922.MainPage"
+             Shell.NavBarIsVisible="False"
+             Title="Match Game Indel">
+<!--Colocamos las siguientes etiquetas para tener la barra de desplazamiento y ordenar los elementos-->
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            
+            <!--Colocamos un label con el titulo-->
+            <Label Text="Match Game Indel" x:Name="lblPrincipal" FontSize="Large"
+                   HorizontalOptions="Center" FontFamily="Cambria" />
+            
+            <!--Agregaamos un label donde nos mostrara el tiempo del juego-->
+            <Label x:Name="LabelTime"
+                   FontFamily="Comic Sans"
+                   FontSize="18"
+                   HorizontalOptions="Center"/>
+
+            <!--Agregamos un boton con sus propiedades el cual sera el que reiniciara el jugo al finalizar la partida-->
+            <Button 
+                x:Name="Tiempo"
+                Text="Timer"
+                 WidthRequest="100"  
+                HeightRequest="50"
+                Clicked="Button_Clicked_1"/>
+
+            <!--Definimos un grid con sus filas y columnas-->
+            <Grid x:Name="Grid1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <!--Generamos los botones que seran las figuras que al presionarlas se voltearan-->
+                <Button Text="?" FontSize="36" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Column="1" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Column="2" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Column="3" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Row="1" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Row="1" Grid.Column="1" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Row="1" Grid.Column="2" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Row="1" Grid.Column="3" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Row="2" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Row="2" Grid.Column="1" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Row="2" Grid.Column="2" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Row="2" Grid.Column="3" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Row="3" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Row="3" Grid.Column="1" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Row="3" Grid.Column="2" Clicked="Button_Clicked"/>
+                <Button Text="?" FontSize="36" Grid.Row="3" Grid.Column="3" Clicked="Button_Clicked"/>
+            </Grid>
+
+            <!--Agregamos un boton con sus propiedades el cual sera el que reiniciara el jugo al finalizar la partida-->
+            <Button 
+                Text="Start"
+                 WidthRequest="100"  
+                HeightRequest="50"
+                Clicked="Button_Clicked_2"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
